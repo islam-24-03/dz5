@@ -15,7 +15,7 @@ export const commentReducer = (state = initialState, action) => {
 }
 
 
-const viewComment = (payload) => ({tyoe: types.VIEW_COMMENT, payload: payload})
+const viewComment = (payload) => ({type: types.VIEW_COMMENT, payload: payload})
 
 
 

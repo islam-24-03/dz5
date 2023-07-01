@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Comment = ({comments}) => {
+const Comment = ({сomments}) => {
     return (
         <div>
             {comments?.map((i) => <div key={i?.id}>

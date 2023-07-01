@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchPhotos} from "../redux/reducers/postReducer.js";
 import Comment from "./Comment.jsx";
 
-const Post = () => {
+const Post = ({comments}) => {
     const dispatch = useDispatch()
     const [post, setPost] = useState({})
 
@@ -29,7 +29,7 @@ const Post = () => {
                             posts?.map(item => <li key={item?.id}>
                                 <button onClick={() => getComments(item?.id)} >{item?.title}</button>
                                 {post[item?.id] && comments.length > 0 && (
-                                    <Comment comments={comments}/>
+                                    <CommentList comments = {comments}/>
                                 )}
                             </li>)
                         }
